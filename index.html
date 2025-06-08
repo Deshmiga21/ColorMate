@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ColorMate - Color Palette Generator</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chroma-js@2.4.2/chroma.min.js"></script>
+  
+</head>
+<body>
+  <header>
+
+    <h1>ColorMate</h1>
+    <select id="harmony-select">
+      <option value="complement">Complementary</option>
+      <option value="analogous">Analogous</option>
+      <option value="triad">Triadic</option>
+      <option value="monochromatic">Monochromatic</option>
+    </select>
+    <input type="color" id="base-color" value="#3498db" />
+    <button onclick="generatePalette()">Generate</button>
+    <button onclick="downloadAsImage()">Download PNG</button>
+<button onclick="downloadAsJSON()">Download JSON</button>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+  </header>
+
+  <main id="palette-container"></main>
+
+  <section class="preview">
+    <h2>Live Preview</h2>
+    <button id="preview-btn">Sample Button</button>
+    <p id="preview-text">Sample Text Block</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 ColorMate</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
